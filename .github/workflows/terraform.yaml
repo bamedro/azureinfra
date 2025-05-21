@@ -44,7 +44,8 @@ jobs:
         name: plan
         path: plan.out
         retention-days: 5
-
+    - name: Adding markdown
+      run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
 
   apply:
     name: 'Terraform Apply'
