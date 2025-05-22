@@ -47,6 +47,10 @@ jobs:
     - name: Adding markdown
       run: echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
 
+    - uses: actions/attest-build-provenance@v2
+      with:
+        subject-path: 'plan.out'
+
   apply:
     name: 'Terraform Apply'
     runs-on: self-hosted
